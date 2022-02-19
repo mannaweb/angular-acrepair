@@ -1,0 +1,131 @@
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1 col-md-5">
+                <h2 class="section-title">Contact Us</h2>
+                <ul class="pl-0">
+                    <!-- contact items -->
+                    <li class="d-flex mb-30">
+                        <i class="round-icon mr-3 ti-mobile"></i>
+                        <div class="align-self-center font-primary">
+                            <p><a href="tel:18002126003" style="color:#666">1800-2126-003</a></p>
+                            <!---<a href=tel:+917980763406>+917980763406</a>-->
+                            
+                        </div>
+                    </li>
+                    <li class="d-flex mb-30">
+                        <i class="round-icon mr-3 ti-email"></i>
+                        <div class="align-self-center font-primary">
+                            <p>24x7kolkatacustomercare@gmail.com</p>
+                        </div>
+                    </li>
+                    <li class="d-flex mb-30">
+                        <i class="round-icon mr-3 ti-map-alt"></i>
+                        <div class="align-self-center font-primary">
+							<p>A.P.C. Roy Road, Kalyan Co-operative Birati, Kolkata- 700051, Word No- 14 PS- Nimta
+                            </p>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- form -->
+          <div class="col-lg-6 col-md-7">
+                <div class="p-5 rounded box-shadow">
+
+
+<form id="contact-form" method="post" action="http://www.kolkatacustomercarehelpline.com/contact-code.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="firstname *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="lastname *" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="email *" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Please specify your need *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                        <option value=""></option>
+                                        <option value="Request a quotes for Air Conditioner">Request a quotes for Air Conditioner</option>
+                                        <option value="Request a quotes for Micro Oven">Request a quotes for Micro Oven</option>
+                                        <option value="Request copy of an invoice">Request a quote for Refrigerator</option>
+                                        <option value="Request a quote for Washing Machine">Request a quote for Washing Machine</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                </form>
+<script>
+    $(function () {
+
+    $('#contact-form').validator();
+
+    $('#contact-form').on('submit', function (e) {
+        if (!e.isDefaultPrevented()) {
+            var url = "contact.html";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    if (messageAlert && messageText) {
+                        $('#contact-form').find('.messages').html(alertBox);
+                        $('#contact-form')[0].reset();
+                    }
+                }
+            });
+            return false;
+        }
+    })
+});
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

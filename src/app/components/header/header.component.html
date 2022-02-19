@@ -1,0 +1,186 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-sm-12 col-12">
+			<div class="popup-btn" onclick="document.getElementById('id01').style.display='block'">
+				<a href="#id01"><b>Get a free Quote from us</b></a>
+			</div>
+			<div id="id01" class="modal">
+				<div class="offset-lg-4 col-lg-4 offset-sm-1 col-sm-10 offset-1 col-10">
+					<div class="modal-body">
+						<form id="contact-form" method="post" action="http://www.kolkatacustomercarehelpline.com/modal.php" role="form" class="modal-content animate">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="firstname *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="lastname *" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="email *" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Your Requirement *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                        <option value=""></option>
+                                        <option value="Request a quotes for Air Conditioner">Request a quotes for Air Conditioner</option>
+                                        <option valu="Request a quotes for Micro Oven">Request a quotes for Micro Oven</option>
+                                        <option valu="Request a quote for Refrigerator">Request a quote for Refrigerator</option>
+                                        <option valu="Request a quote for Washing Machine">Request a quote for Washing Machine</option>
+                                        <option valu="Other">Other</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            </div>
+                        </div>
+                     </div>
+
+                </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+ var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}   
+</script>
+<!--------------------->
+
+<!-- preloader start -->
+
+<!-- preloader end --> 
+
+<!-- navigation -->
+<header>
+    
+    <!-- top header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline text-lg-right text-center">
+                        <li class="list-inline-item">
+                            <a href="mailto:info@companyname.com">24x7kolkatacustomercare@gmail.com</a>
+                        </li>
+                        <li class="list-inline-item" style="color:#fff">
+                            Call Us Now:
+                                <span class="ml-2"><a href="tel:18002126003"><strong>1800-2126-003</strong></a></span>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" id="searchOpen">
+                                <i class="ti-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nav bar -->
+    <div class="navigation">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/images/24X7-logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="javascript:void(0);" routerLink="/about">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Service
+                            </a>
+                            <div class="dropdown-menu" >
+                                <a class="dropdown-item" href="javascript:void(0);" routerLink="/ac">AC Repair and Service</a>
+                                <a class="dropdown-item" href="javascript:void(0);" routerLink="/refrigerator">Refrigerator Repair and Services</a>
+                                <a class="dropdown-item" href="javascript:void(0);" routerLink="/washing" >Washing Machine Repair and Services</a>
+                                <a class="dropdown-item" href="javascript:void(0);" routerLink="/microwave">Microwave Oven Repairing Service</a>
+                                <a class="dropdown-item" href="javascript:void(0);" routerLink="/geyser">Geyser Repairing Service</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" routerLink="/testimonials" >
+                                Testimonials
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" routerLink="/offers">
+                                Special Offers
+                            </a>
+                            
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);"  routerLink="/contact">Contact</a>
+                        </li>
+                       <li class="nav-item">
+                            <a class="nav-link btn btn-primary btn-sm" href="javascript:void(0);" routerLink="/contact">get a quote</a>
+                        </li>
+                         
+                      
+                       
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Global site tag (gtag.js) - Google Ads: 316882149 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-316882149"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-316882149');
+</script>
+
+</header>
